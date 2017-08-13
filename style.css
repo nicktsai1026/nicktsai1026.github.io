@@ -6,7 +6,7 @@ body .container {
   border-bottom: 1px solid black;
 }
 .bgPhoto {
-  background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),#000 url(https://static.pexels.com/photos/6675/flight-mountains-sky-flying.jpeg) center center fixed no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),#000 url(https://static.pexels.com/photos/37728/pexels-photo-37728.jpeg) center center fixed no-repeat;
   background-size:cover;
   height: 600px;
   background-position: bottom;
