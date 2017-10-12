@@ -1,9 +1,14 @@
-body .container {
+body .profiles {
   margin: 0px;
   padding: 0px;
 }
 .container-fluid {
   border-bottom: 1px solid black;
+}
+.navbar-default .navbar-brand {
+  font-family:'Alex Brush', cursive;
+  font-size: 25px;
+  padding-top: 20px;
 }
 .bgPhoto {
   background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),#000 url(https://static.pexels.com/photos/37728/pexels-photo-37728.jpeg) center center fixed no-repeat;
@@ -33,37 +38,18 @@ body .container {
   font-size: 20px;
   color: white;
 }
-.navbar-default .navbar-brand {
-  font-family:'Alex Brush', cursive;
-  font-size: 20px;
-}
-hr {
-  background: black;
-  width: 80px;
-  height: 5px;
-  margin-top: 0px;
-  border-top:0px;
-}
-.personalPhoto img {
-  height: 300px;
-  width: 300px;
-  border-radius: 50%;
-}
-
 /* entire container, keeps perspective */
 .flip-container {
 	perspective: 1000px;
 }
-	/* flip the pane when hovered */
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
-		transform: rotateY(180deg);
-	}
-
-.flip-container, .front, .back {
-  height: 300px;
-  width: 300px;
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
 }
-
+.flip-container, .front, .back {
+  height: 250px;
+  width: 250px;
+}
 /* flip speed goes here */
 .flipper {
 	transition: 0.6s;
@@ -71,44 +57,45 @@ hr {
 
 	position: relative;
 }
-
 /* hide back of pane during swap */
 .front, .back {
 	backface-visibility: hidden;
-
 	position: absolute;
 	top: 0;
 	left: 0;
 }
-
 /* front pane, placed above back */
 .front {
 	z-index: 2;
 	/* for firefox 31 */
 	transform: rotateY(0deg);
 }
-
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
 }
-
 .flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
 	transform: rotateY(180deg);
 }
-
-.introduction {
+.introduction, .education {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 90px;
+    padding-top: 80px;
 }
-.introduction h2 {
-  font-size: 40px;
+hr {
+  background: black;
+  width: 50px;
+  height: 5px;
+  margin-top: 0px;
+  border-top:0px;
+}
+.introduction h2,.education h2 {
+  font-size: 25px;
   font-family: 'Montserrat', sans-serif;
   color: black;
 }
-.introduction p {
+.introduction p, .education p {
   font-family: 'Cardo', serif;
   font-size: 18px;
   padding-left: 30px;
@@ -117,44 +104,65 @@ hr {
 .personalPhoto {
     display: flex;
     justify-content: center;
-    padding-top: 100px;
+    margin-bottom: -120px;
+    z-index: 1;
+}
+.personalPhoto img {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  border: 10px solid white;
+}
+.bgColor {
+  background:url(https://static.pexels.com/photos/37728/pexels-photo-37728.jpeg) center no-repeat;
+  padding-bottom: 30px;
 }
 .page-scroll {
   font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
 }
-.bgMac {
-  background:url(http://adventurega.me/bootstrap/img/header.jpg);
-  background-position: bottom;
-  margin-top: 50px;
-  padding-bottom: 100px;
+.icon {
+    text-align: center;
+    padding-top: 40px;
 }
-.skill {
-  text-align: center;
+.icon h2 {
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  margin-bottom: 20px;
 }
-.skill h2 {
-  padding-top: 40px;
-  font-size: 40px;
+.bgMacbook {
+  background:url(images/skillBG.jpg) center no-repeat;
+  padding-bottom: 50px;
+}
+.bgMacbook h3 {
+  font-size: 25px;
   font-family: 'Montserrat', sans-serif;
   color: black;
 }
-.bgMac h3 {
-  font-family: 'Cardo', serif;
-  font-size: 30px;
-  color: white;
-  padding-bottom: 20px;
+.web, .language {
+  padding: 0px;
 }
-.web h3 {
+.web h3, .language h3{
   text-align: center;
+  padding-top: 30px;
+}
+.language ul {
+  margin-left: 120px;
+}
+.web ul {
+  text-align: center;
+  padding: 0px;
 }
 .web li {
   list-style: none;
   text-align: center;
   font-size: 20px;
-  background: #312c22;
+  background: #5c5c5c;
   color: white;
   border-radius: 10px;
-  width: 150px;
-  margin: 15px;
+  width: 130px;
+  margin: 5px;
   padding: 5px;
   display: inline-block;
 }
@@ -185,135 +193,107 @@ hr {
   height: 10px;
   margin-bottom: 20px;
 }
-.hobbieTitle h2, .album h2 {
-  text-align: center;
-  padding-top: 40px;
+.data2 {
+  margin-top: 15px;
+  background-color: red;
+  width: 50%;
+  height: 10px;
+  margin-bottom: 20px;
+}
+.bgProject {
+  background: url(images/pexels-photo-356043.jpeg) center no-repeat;
+  width: 100%;
+  padding: 20px 20px 20px 20px;
+}
+.project3, .project1, .project2 {
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 30px;
+}
+.project1 {
+  margin-top: 20px;
+}
+.projectImage, .description {
+  padding: 0px;
+}
+.description {
+  text-align: right;
+  padding-right: 40px;
+}
+.description h1 {
+  text-align: left;
+  padding-left: 30px;
   font-size: 40px;
   font-family: 'Montserrat', sans-serif;
-  color: black;
 }
-.hobbieTitle {
-  padding: 50px 0px 50px 0px;
-}
-.bgHobbie img {
-  width: 50%;
-  height: 50%;
-}
-.bgHobbie img:hover {
-  width: 80%;
-  height: 80%;
-}
-.bgHobbie {
+.description h2 {
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
-  padding-bottom: 100px;
-  background: #ddd;
+  padding-left: 20px;
+  margin-bottom: 20px;
 }
-.bgHobbie p {
-  text-align: center;
+.description h4 {
+  font-size: 20px;
   font-family: 'Cardo', serif;
-  font-size: 25px;
-  padding-top: 50px;
+  text-align: center;
+  padding-left: 20px;
 }
-.album {
-  padding-bottom: 30px;
+.description a {
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
 }
-.albumRight img, .albumLeft img {
+.projectImage img {
   height: 100%;
   width: 100%;
-
-}
-.albumRight {
-  padding-left:0px;
-}
-.albumLeft {
-  padding-right: 0px;
-}
-.changepage {
-  text-align: center;
-  padding-top: 20px;
 }
 .contact img {
   width: 40px;
   height: 40px;
   margin: 5px;
 }
-.contact h2 {
-  text-align: center;
-  font-size: 30px;
-  font-family: 'Montserrat', sans-serif;
-  color: black;
-}
 .contact {
+  text-align: center;
+}
+.footer {
   text-align: center;
   background: #ddd;
   margin-top: 20px;
 }
-.contact hr {
-  margin-bottom: 5px;
+.footer p {
+  padding: 20px 0px 20px 0px;
+  margin: 0px;
+  font-family: 'Cardo', serif;
+  font-size: 15px;
 }
 
-.btn-primary:focus{
-	outline: none !important;
+@media screen and (max-width: 450px) and (min-width: 300px) {
+  .introduction {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 130px;
+    }
+  .education {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 0px;
+  }
 }
-.btn-primary:hover:active{
-	background: white;
-	border: 1px solid black !important;
+@media screen and (max-width: 1024px) and (min-width: 770px) {
+  .language ul {
+      margin-left: 80px;
+  }
 }
-
-.btn-primary:hover{
-	background: white;
-	border: 1px solid black !important;
+@media screen and (max-width: 768px) and (min-width: 330px) {
+  .language ul {
+      margin-left: 50px;
+  }
 }
-.paginations{
-	background: black;
-	color: white;
-	border-radius: 100px;
-	border: 1px solid black !important;
-	margin-bottom:20px;
-	margin-right: 5px;
+@media screen and (max-width: 320px) {
+  .language ul {
+      margin-left: 30px;
+  }
 }
-
-.paginations:hover ,.paginations:active, .paginations:focus{
-	background: white;
-	color: black ;
-
-}
-
-/*.btn-vertical-slider{ margin-left:35px; cursor:pointer;}
-a {  cursor:pointer;}
-.carousel,.vertical, .carousel-inner .item {
-  -webkit-transition: 0.6s ease-in-out top;
-     -moz-transition: 0.6s ease-in-out top;
-      -ms-transition: 0.6s ease-in-out top;
-       -o-transition: 0.6s ease-in-out top;
-          transition: 0.6s ease-in-out top;
-}
-
- .carousel,.vertical .active {
-  top: 0;
-}
-
- .carousel,.vertical .next {
-  top: 100%;
-}
-
- .carousel,.vertical .prev {
-  top: -100%;
-}
-
- .carousel,.vertical, .next,.left,
-.carousel,.vertical, .prev,.right {
-  top: 0;
-}
-
- .carousel,.vertical .active,.left {
-  top: -100%;
-}
-
- .carousel,.vertical .active,.right {
-  top: 100%;
-}
-
- .carousel,.vertical .item {
-    left: 0;
-}*/
