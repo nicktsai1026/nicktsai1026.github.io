@@ -63,3 +63,8 @@ a {
 .switcher a {
   padding: 20px;
 }
+@media screen and (max-width: 770px) and (min-width: 300px) {
+  .landingPage {
+      padding: 10px;
+  }
+}
